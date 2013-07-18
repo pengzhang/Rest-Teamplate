@@ -1,0 +1,11 @@
+/.idea
+topic.iml
+.classpath
+.project
+.settings
+hs_err_pid*.log
+/target/
+/WebRoot/WEB-INF/classes/
+/*.patch
+logs
+*.sql
