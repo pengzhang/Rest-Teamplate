@@ -3,5 +3,31 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+	<display-name>Rest-Template</display-name>
+	
+	<filter>
+		<filter-name>Log</filter-name>
+		<filter-class>com.fanaifan.filter.MyFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Log</filter-name>
+		<url-pattern>/api/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>JerseyApplication</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JerseyApplication</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>

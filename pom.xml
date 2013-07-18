@@ -75,6 +75,12 @@
 			<artifactId>persistence-api</artifactId>
 			<version>1.0-rev-1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>3.2.3.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>rest-template</finalName>
